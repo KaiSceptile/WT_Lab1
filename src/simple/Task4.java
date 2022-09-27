@@ -4,6 +4,7 @@ public class Task4 {
     private boolean CheckSimpleNumber(int a){
         boolean check=true;
         if (a==1) check=false;
+        if (a==2) return true;
         for (int i=2; i<1+Math.sqrt((double) a); i++){
             if (a % i == 0) check=false;
         }
