@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {
 
-        Task1 task1=new Task1(12,10);
-        System.out.println("Task1: "+task1.GetResult());
+        Task1 task1=new Task1();
+        System.out.println("Task1: "+task1.GetResult(12,10));
 
         Task2 task2=new Task2(3,11);
         System.out.println("Task2: "+task2.CheckBelongingToFigure());
