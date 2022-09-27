@@ -2,11 +2,11 @@ import simple.*;
 import simple.Task1;
 
 import ClassesAndObjects.Task9.*;
-
+import ClassesAndObjects.Task12to16.*;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
 
         Task1 task1=new Task1(12,10);
         System.out.println("Task1: "+task1.GetResult());
@@ -37,7 +37,7 @@ public class Main {
         Task8 task8=new Task8();
         System.out.println("Task8: \n"+task8.PrintIntArray(task8.GetIndexesToInsert(testinserta,testinsertb)));
 
-        ArrayList<Ball> basket = new ArrayList<Ball>();
+        ArrayList<Ball> basket = new ArrayList<>();
         basket.add(new Ball(3.76, Color.blue));
         basket.add(new Ball(2.176, Color.yellow));
         basket.add(new Ball(2.176, Color.blue));
@@ -46,6 +46,27 @@ public class Main {
 
         Basket Baskettest= new Basket(basket);
         System.out.println("Task9: \nweight:"+Baskettest.weight+" number of blue balls:"+Baskettest.CountBlueBalls());
+
+        Book book=new Book("Name","Twen",1200,3,7);
+        System.out.println("Task12: \n"+book);
+
+        ProgrammerBook pbook=new ProgrammerBook("Name","Twen",1200,3,7,"C++",3);
+        System.out.println("Task13: \n"+pbook);
+
+        Book copy=(Book) book.clone();
+        System.out.println("Task14: \n"+copy);
+
+        ArrayList<Book> library= new ArrayList<>();
+        library.add(new Book("Name","Twen",1200,3,7));
+        library.add(new Book("Magazine","Twen",1110,6,1));
+        library.add(new Book("Magazine","Pushkin",1280,2,3));
+        library.add(new Book("Collection","Pushkin",180,1,4));
+        library.sort(null);
+        System.out.println("Task15: \n"+library);
+
+        BookComparator Comparer=new BookComparator();
+        library.sort(Comparer.byAuthorandTitle);
+        System.out.println("Task16: \n"+library);
 
     }
 }
