@@ -1,6 +1,9 @@
 import simple.*;
 import simple.Task1;
-import simple.Task6;
+
+import ClassesAndObjects.Task9.*;
+
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,6 +36,16 @@ public class Main {
         double[] testinsertb={1,2,8,10,14};
         Task8 task8=new Task8();
         System.out.println("Task8: \n"+task8.PrintIntArray(task8.GetIndexesToInsert(testinserta,testinsertb)));
+
+        ArrayList<Ball> basket = new ArrayList<Ball>();
+        basket.add(new Ball(3.76, Color.blue));
+        basket.add(new Ball(2.176, Color.yellow));
+        basket.add(new Ball(2.176, Color.blue));
+        basket.add(new Ball(12.726, Color.blue));
+        basket.add(new Ball(12.726, Color.black));
+
+        Basket Baskettest= new Basket(basket);
+        System.out.println("Task9: \nweight:"+Baskettest.weight+" number of blue balls:"+Baskettest.CountBlueBalls());
 
     }
 }
