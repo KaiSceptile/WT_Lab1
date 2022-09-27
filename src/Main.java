@@ -1,6 +1,6 @@
 import simple.*;
 import simple.Task1;
-import simple.Task2;
+import simple.Task6;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,5 +18,16 @@ public class Main {
         int[] testarray={1,19,22,10,7,5};
         Task4 task4= new Task4(testarray.length,testarray);
         System.out.println("Task4: "+task4.GetNumbersOfSimple());
+
+        Task5 task5= new Task5(testarray.length,testarray);
+        System.out.println("Task5: "+task5.GetTheLeastNumberOfElements());
+
+        double[] testarray2={1,19,22,10,7,5};
+        Task6 task6= new Task6();
+        System.out.println("Task6: \n"+task6.PrintMatrix(task6.GetMatrix(testarray2)));
+
+        Task7 task7=new Task7();
+        System.out.println("Task7: \n"+task7.PrintArray(task7.ShellSort(testarray2)));
+
     }
 }
