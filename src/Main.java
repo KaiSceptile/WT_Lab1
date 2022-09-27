@@ -29,5 +29,10 @@ public class Main {
         Task7 task7=new Task7();
         System.out.println("Task7: \n"+task7.PrintArray(task7.ShellSort(testarray2)));
 
+        double[] testinserta={3,9,11,12};
+        double[] testinsertb={1,2,8,10,14};
+        Task8 task8=new Task8();
+        System.out.println("Task8: \n"+task8.PrintIntArray(task8.GetIndexesToInsert(testinserta,testinsertb)));
+
     }
 }
