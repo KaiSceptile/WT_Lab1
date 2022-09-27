@@ -1,12 +1,6 @@
 package simple;
 
 public class Task4 {
-    int N;
-    int[] Array;
-    public Task4(int N, int[] Array){
-        this.N=N;
-        this.Array= Array;
-    }
     private boolean CheckSimpleNumber(int a){
         boolean check=true;
         if (a==1) check=false;
@@ -16,10 +10,10 @@ public class Task4 {
         return check;
     }
 
-    public String GetNumbersOfSimple(){
+    public String GetNumbersOfSimple(int[] Array){
         String answer="";
-        for (int i=0; i<this.N; i++){
-            if (CheckSimpleNumber(this.Array[i])) answer=answer+(i+1)+" ";
+        for (int i=0; i<Array.length; i++){
+            if (CheckSimpleNumber(Array[i])) answer=answer+(i+1)+" ";
         }
         if (answer.length() == 0) answer="No";
         return answer;
